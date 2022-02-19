@@ -45,10 +45,10 @@ install_nvm() {
 install_brew_apps() {
   echo "${cyan}Installing Brew Apps${reset}"
   brew install git
+  install_nvm
+  install_jenv
   brew install yarn
   brew install deno
-  install_jenv
-  install_nvm
 
   brew install alfred
   brew install clipy
