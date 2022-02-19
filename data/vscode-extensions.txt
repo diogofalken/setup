@@ -1,0 +1,17 @@
+coenraads.bracket-pair-colorizer-2
+naumovs.color-highlight
+dracula-theme.theme-dracula
+wix.vscode-import-cost
+pkief.material-icon-theme
+esbenp.prettier-vscode
+visualstudioexptteam.vscodeintellicode
+xabikos.javascriptsnippets
+wakatime.vscode-wakatime
+esbenp.prettier-vscode
+EditorConfig.EditorConfig
+eamodio.gitlens
+denoland.vscode-deno
+dbaeumer.vscode-eslint
+pmneo.tsimporter
+Angular.ng-template
+TabNine.tabnine-vscode
