@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 cyan=`tput setaf 6`
 reset=`tput sgr0`
@@ -13,11 +13,11 @@ install_jenv() {
   source ~/.zshrc
 
   # Java 8 and 11 versions
-  brew install adoptopenjdk8
+  brew install temurin8
   brew install temurin11
 
   # Add version 8 and 11 to jenv
-  jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
+  jenv add /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/
   jenv enable-plugin export
   jenv add /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/
   
@@ -25,21 +25,20 @@ install_jenv() {
   jenv enable-plugin maven
 
   # Set version 11 as global
-  jenv global openjdk64-11.0.13
+  jenv global openjdk64-11.0.14.1
 }
 
 install_nvm() {
   echo "${cyan}Installing NVM${reset}"
   brew install nvm
   mkdir ~/.nvm
-  ~/.bash_profile
-
-  echo 'export NVM_DIR=~/.nvm"' >> ~/.zshrc
-  echo 'eval "$(brew --prefix nvm)/nvm.sh"' >> ~/.zshrc
   source ~/.zshrc
 
-  nvm install lts
-  nvm use lts
+  echo 'export NVM_DIR=~/.nvm"' >> ~/.zshrc
+  echo 'source "$(brew --prefix nvm)/nvm.sh"' >> ~/.zshrc
+  source ~/.zshrc
+
+  nvm install --lts
 }
 
 install_brew_apps() {

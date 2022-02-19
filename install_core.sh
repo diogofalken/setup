@@ -13,6 +13,13 @@ install_brew() {
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   brew update
   brew install iterm2
+
+  # Install font
+  brew tap homebrew/cask-fonts
+  brew install --cask font-jetbrains-mono
+
+  # Create work directory
+  mkdir ~/dev
 }
 
 install_xcode
