@@ -56,6 +56,9 @@ install_brew_apps() {
   brew install spotify
   brew install brave-browser
   brew install discord
+  brew install homebrew/cask-drivers/logitech-options
+  brew install fig
+  brew install homebrew/cask/onedrive
 }
 
 install_brew_apps
